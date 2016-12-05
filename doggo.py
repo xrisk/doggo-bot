@@ -26,5 +26,7 @@ async def on_message(message):
         await client.send_message(message.channel, embed=em)
 
 
-threading.Thread(target=http.server.test(http.server.SimpleHTTPRequestHandler, port=int(os.getenv('PORT', 5000)))).start()
+threading.Thread(target=http.server.test, kwargs={'HandlerClass': http.server.SimpleHTTPRequestHandler, 'port': int(os.getenv('PORT', 5000))}).start()
+# threading.Thread(target=client.run, args=('MjU1MzYyNTAxMjc1ODExODQy.CyciSA.EKkflsjdmeSt21HTbBd-A98Ijf0')).start()
+
 client.run('MjU1MzYyNTAxMjc1ODExODQy.CyciSA.EKkflsjdmeSt21HTbBd-A98Ijf0')
