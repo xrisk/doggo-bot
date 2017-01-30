@@ -24,7 +24,10 @@ async def on_message(message):
         em = discord.Embed()
         em.set_image(url='https://cdn.discordapp.com/attachments/97601590860464128/255385870092206080/jack.jpg')
         await client.send_message(message.channel, embed=em)
-
+    elif message.content.startswith('+deer'):
+        em = discord.Embed()
+        em.set_image(url='https://cdn.discordapp.com/attachments/97601590860464128/275634969869680640/3e33b0b55c1f701aaf75c8684b8682fe.jpg')
+        await client.send_message(message.channel, embed=em)
 
 threading.Thread(target=http.server.test, kwargs={'HandlerClass': http.server.SimpleHTTPRequestHandler, 'port': int(os.getenv('PORT', 5000))}).start()
 # threading.Thread(target=client.run, args=('MjU1MzYyNTAxMjc1ODExODQy.CyciSA.EKkflsjdmeSt21HTbBd-A98Ijf0')).start()
